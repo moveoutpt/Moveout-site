@@ -190,6 +190,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .area-list li { background: var(--mint); color: #1F3A31; border-radius: 999px; padding: 6px 12px; font-size: 14px; font-weight: 600; }
 .areas p { font-size: 14px; }
 
+/* Lista de formações na secção verde da gravidez */
+.feature-list { list-style: none; margin: 0; padding: 18px; background: var(--river-2); border-radius: var(--radius); display: grid; gap: 10px; }
+.feature-list li { color: #fff; padding-left: 22px; position: relative; }
+.feature-list li::before { content: "✓"; position: absolute; left: 0; color: var(--sun-soft); font-weight: 700; }
+
 /* Lista de formações (página Sobre) */
 .creds { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 10px; }
 .creds li { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
