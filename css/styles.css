@@ -1,0 +1,340 @@
+/* =========================================================
+   MOVE OUT — estilos do site
+   Mobile primeiro: as regras base são para telemóvel e os
+   @media no fim ajustam para ecrãs maiores.
+   ========================================================= */
+
+/* ---------- 1. Cores e medidas (tokens) ----------
+   Mudas uma cor aqui e muda no site todo. */
+:root {
+  --ink: #0E1A16;        /* quase preto, verde muito escuro */
+  --ink-2: #1C2E28;      /* fundo dos vídeos */
+  --night: #0A1411;      /* rodapé */
+  --river: #1F5C4A;      /* verde Tejo */
+  --river-2: #174A3B;
+  --sun: #F28C45;        /* laranja nascer do sol (botões) */
+  --sun-soft: #FFD3B3;
+  --bg: #F5F7F4;         /* fundo claro */
+  --card: #FFFFFF;
+  --line: #DCE3DF;
+  --line-2: #EEF2EF;
+  --muted: #4A5A54;      /* texto secundário em fundo claro */
+  --muted-dark: #B9C7C1; /* texto secundário em fundo escuro */
+  --mint: #E4EEE9;
+  --radius: 14px;
+  --max: 1120px;         /* largura máxima do conteúdo no computador */
+  --display: "Anton", Impact, "Arial Narrow", sans-serif;
+  --body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* ---------- 2. Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.55;
+}
+img, video { max-width: 100%; display: block; }
+a { color: var(--river); }
+a:hover { color: var(--ink); }
+h1, h2, h3 { margin: 0; }
+p { margin: 0; }
+
+/* Contentor central: limita a largura no computador */
+.wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+/* Títulos de secção no estilo "cartaz" */
+.title {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+}
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--sun);
+}
+.section { padding: 48px 0 8px; }
+.section .title { margin-bottom: 20px; }
+.muted { color: var(--muted); }
+
+/* Esconde texto visualmente mas mantém-no para leitores de ecrã */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* ---------- 3. Botões ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 52px; padding: 0 22px;
+  border-radius: 12px;
+  font: inherit; font-weight: 700; font-size: 16px;
+  text-decoration: none; cursor: pointer; border: 0;
+  transition: transform .15s ease, background-color .15s ease;
+}
+.btn:active { transform: scale(.98); }
+.btn-sun { background: var(--sun); color: var(--ink); }
+.btn-sun:hover { background: #F59C5C; color: var(--ink); }
+.btn-ghost { background: transparent; color: #fff; border: 1px solid #3E5A50; min-height: 48px; font-weight: 600; }
+.btn-ghost:hover { color: #fff; border-color: #6B8A7F; }
+.btn-white { background: #fff; color: var(--ink); min-height: 48px; }
+.btn-white:hover { color: var(--ink); background: var(--mint); }
+.btn svg { width: 20px; height: 20px; flex: none; }
+
+/* Foco visível para quem navega com teclado */
+a:focus-visible, button:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--sun);
+  outline-offset: 2px;
+}
+
+/* ---------- 4. Cabeçalho ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 20;
+  background: var(--ink);
+}
+.site-header .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  min-height: 64px;
+}
+.brand {
+  font-family: var(--display); font-size: 24px; letter-spacing: 1px;
+  color: #fff; text-decoration: none;
+}
+.brand:hover { color: #fff; }
+.nav { display: none; } /* no telemóvel só mostramos o botão da app */
+.nav a { color: #D6E0DB; text-decoration: none; font-weight: 500; font-size: 15px; }
+.nav a:hover { color: #fff; }
+.app-link {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px;
+  border: 1px solid #3E5A50; border-radius: 999px;
+  color: #fff; font-size: 13px; font-weight: 600; text-decoration: none;
+}
+.app-link:hover { color: #fff; border-color: #6B8A7F; }
+
+/* ---------- 5. Hero (topo com vídeo) ---------- */
+.hero {
+  position: relative;
+  background: var(--ink);
+  color: #fff;
+  overflow: hidden;
+}
+.hero-media {
+  position: relative;
+  height: 420px;
+  background: var(--ink-2);
+}
+/* O vídeo cobre a área toda, como uma foto de fundo */
+.hero-media video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  object-position: center 25%;   /* no telemóvel, não cortar a cabeça */
+}
+/* Mensagem que aparece enquanto ainda não há vídeo */
+.media-placeholder {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+  color: var(--muted-dark); font-size: 13px; text-align: center; padding: 0 32px;
+}
+.hero-content { padding: 24px 0 36px; }
+.hero-content .wrap { display: flex; flex-direction: column; gap: 16px; }
+.hero h1 {
+  font-family: var(--display); font-weight: 400;
+  font-size: 44px; line-height: 1.04; text-transform: uppercase;
+}
+.hero p.lead { color: #D6E0DB; font-size: 16px; max-width: 34em; }
+.hero-ctas { display: flex; flex-direction: column; gap: 10px; }
+
+.trust {
+  background: var(--river); color: #fff;
+  font-size: 12px; font-weight: 600;
+}
+.trust .wrap {
+  display: flex; justify-content: space-between; gap: 12px;
+  padding-top: 14px; padding-bottom: 14px;
+}
+
+/* ---------- 6. Cartões / atalhos ---------- */
+.tiles { display: grid; gap: 12px; }
+.tile {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 18px 16px;
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  color: var(--ink); text-decoration: none;
+  transition: border-color .15s ease, transform .15s ease;
+}
+.tile:hover { color: var(--ink); border-color: var(--river); transform: translateY(-1px); }
+.tile strong { display: block; font-size: 17px; }
+.tile span.sub { display: block; color: var(--muted); font-size: 14px; }
+.tile .arrow { font-size: 22px; color: var(--river); flex: none; }
+
+/* ---------- 7. Passos ---------- */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; }
+.steps li { display: flex; gap: 14px; align-items: flex-start; }
+.step-num {
+  flex: 0 0 38px; height: 38px; border-radius: 50%;
+  background: var(--ink); color: #fff;
+  display: flex; align-items: center; justify-content: center; font-weight: 700;
+}
+.steps strong { display: block; font-size: 17px; }
+
+/* ---------- 8. Horários ---------- */
+.spots { display: grid; gap: 12px; }
+.spot { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.spot iframe { display: block; width: 100%; height: 160px; border: 0; background: var(--line); }
+.spot-body { padding: 16px; display: grid; gap: 6px; }
+.spot-body h3 { font-size: 17px; }
+.row { display: flex; justify-content: space-between; gap: 12px; }
+.row b { font-weight: 600; white-space: nowrap; }
+.note {
+  margin-top: 12px; padding: 12px 14px;
+  background: var(--mint); border-radius: 12px;
+  font-size: 14px; color: #1F3A31;
+}
+
+/* ---------- 9. Preços (separadores) ---------- */
+.tabs {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px;
+  padding: 4px; background: #E4EAE6; border-radius: 12px; margin-bottom: 16px;
+  max-width: 480px;
+}
+.tab {
+  min-height: 44px; border: 0; border-radius: 9px;
+  background: transparent; color: #1F3A31;
+  font: inherit; font-size: 15px; font-weight: 600; cursor: pointer;
+}
+.tab[aria-selected="true"] { background: var(--ink); color: #fff; }
+.panel[hidden] { display: none; }
+.price-grid { display: grid; gap: 12px; }
+.price-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 16px; }
+.price-card h3 { font-size: 17px; }
+.price-card .sub { display: block; margin: 2px 0 8px; color: var(--muted); font-size: 14px; }
+.price-card .row { padding: 9px 0; border-top: 1px solid var(--line-2); }
+.price-card .row span { color: var(--muted); }
+.price-card .row b { font-weight: 700; }
+.pay-note { margin-top: 14px; font-size: 14px; color: var(--muted); }
+
+/* ---------- 10. Gravidez e pós-parto ---------- */
+.feature { margin-top: 48px; background: var(--river); color: #fff; }
+.feature .wrap { padding-top: 40px; padding-bottom: 40px; display: grid; gap: 16px; }
+.feature .eyebrow { color: var(--sun-soft); }
+.feature p { color: #E4EEE9; }
+.quote-dark { margin: 0; padding: 18px; background: var(--river-2); border-radius: var(--radius); }
+.quote-dark p { color: #fff; font-size: 16px; margin-bottom: 8px; }
+.quote-dark cite { font-style: normal; font-size: 14px; color: #CFE0D8; }
+
+/* ---------- 11. Testemunhos ---------- */
+.testimonials { display: grid; gap: 12px; align-items: start; }
+.video-card {
+  position: relative; margin: 0; aspect-ratio: 4 / 5;   /* vertical, como no Instagram */
+  background: var(--ink-2); border-radius: var(--radius); overflow: hidden;
+}
+.video-card video { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; position: absolute; inset: 0; }
+.video-card .media-placeholder { color: var(--muted-dark); }
+.video-card .who { color: #fff; font-weight: 600; }
+/* Legenda por cima do vídeo, com fundo escuro para se ler bem */
+.video-card figcaption {
+  position: absolute; left: 12px; bottom: 12px; right: 12px;
+  padding: 8px 12px; border-radius: 10px;
+  background: rgba(14, 26, 22, .75); color: #fff; font-size: 14px; font-weight: 600;
+}
+.quote { margin: 0; padding: 18px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); }
+.quote p { margin-bottom: 8px; }
+.quote cite { font-style: normal; font-size: 14px; color: var(--muted); }
+
+/* ---------- 12. FAQ ---------- */
+.faq { display: grid; gap: 8px; }
+.faq details { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 0 16px; }
+.faq summary {
+  list-style: none; cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  min-height: 56px; font-weight: 600;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-size: 22px; color: var(--river); transition: transform .2s ease; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { padding-bottom: 16px; color: var(--muted); }
+
+/* ---------- 13. Chamada final e rodapé ---------- */
+.final { margin-top: 48px; background: var(--ink); color: #fff; }
+.final .wrap { padding-top: 48px; padding-bottom: 48px; display: grid; gap: 14px; }
+.final h2 { font-family: var(--display); font-weight: 400; font-size: 34px; line-height: 1.05; text-transform: uppercase; }
+.final p { color: #D6E0DB; }
+.final small { color: var(--muted-dark); text-align: center; }
+
+.site-footer { background: var(--night); color: var(--muted-dark); font-size: 14px; }
+.site-footer .wrap { padding-top: 32px; padding-bottom: 44px; display: grid; gap: 16px; }
+.site-footer a { color: #fff; }
+.site-footer a:hover { color: var(--sun-soft); }
+.links { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.links.small a { color: var(--muted-dark); }
+
+/* ---------- 14. Páginas de texto (privacidade, contacto) ---------- */
+.page { padding: 40px 0 64px; }
+.page .wrap { max-width: 760px; }
+.page h1 { font-family: var(--display); font-weight: 400; font-size: 38px; text-transform: uppercase; margin-bottom: 8px; }
+.page h2 { font-size: 20px; margin: 32px 0 8px; }
+.page p, .page li { color: #22332D; }
+.page p + p { margin-top: 10px; }
+.page ul { padding-left: 20px; }
+.page table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 15px; }
+.page th, .page td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.page th { font-weight: 600; }
+.contact-list { display: grid; gap: 12px; margin-top: 20px; }
+
+/* ---------- 15. Ecrãs maiores ---------- */
+@media (min-width: 640px) {
+  .hero-ctas { flex-direction: row; }
+  .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .spots { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .testimonials { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .price-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .trust .wrap { justify-content: center; gap: 40px; }
+}
+
+@media (min-width: 960px) {
+  .title { font-size: 40px; }
+  .section { padding-top: 72px; }
+  .nav { display: flex; gap: 28px; }
+
+  /* No computador: texto à esquerda, vídeo vertical à direita (como um ecrã de telemóvel).
+     Esticar um vídeo vertical à largura toda deixava-o desfocado e cortado. */
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    align-items: center;
+    column-gap: 64px;
+    padding: 56px max(20px, calc((100% - var(--max)) / 2 + 20px));
+  }
+  .hero-media { grid-column: 2; grid-row: 1; height: 600px; border-radius: 24px; overflow: hidden; }
+  .hero-media video { object-position: center; }
+  .hero-content { grid-column: 1; grid-row: 1; padding: 0; }
+  .hero-content .wrap { padding: 0; }
+  .hero h1 { font-size: 64px; max-width: 12em; }
+  .hero p.lead { font-size: 18px; }
+
+  .tiles { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .tile { flex-direction: column; align-items: flex-start; min-height: 150px; }
+  .steps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+  .price-grid.three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .feature .wrap { grid-template-columns: 1fr 1fr; align-items: center; column-gap: 64px; }
+  .feature .feature-text { display: grid; gap: 16px; }
+  .final .wrap { justify-items: center; text-align: center; }
+  .final h2 { font-size: 48px; }
+  .final .btn { min-width: 320px; }
+  .faq { max-width: 760px; }
+}
+
+/* Quem prefere menos movimento não vê animações */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; scroll-behavior: auto !important; }
+}
