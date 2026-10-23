@@ -177,6 +177,24 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .tile span.sub { display: block; color: var(--muted); font-size: 14px; }
 .tile .arrow { font-size: 22px; color: var(--river); flex: none; }
 
+/* ---------- 6b. Quem te treina + zonas ---------- */
+.about { display: grid; gap: 28px; }
+.about p + p { margin-top: 12px; }
+.about .btn { margin-top: 20px; }
+/* Botão com contorno para fundos claros */
+.btn-ghost-dark { background: transparent; color: var(--ink); border: 1px solid var(--ink); min-height: 48px; font-weight: 600; }
+.btn-ghost-dark:hover { background: var(--ink); color: #fff; }
+.areas { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
+.areas h3 { font-size: 17px; margin-bottom: 12px; }
+.area-list { list-style: none; margin: 0 0 14px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.area-list li { background: var(--mint); color: #1F3A31; border-radius: 999px; padding: 6px 12px; font-size: 14px; font-weight: 600; }
+.areas p { font-size: 14px; }
+
+/* Lista de formações (página Sobre) */
+.creds { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 10px; }
+.creds li { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+.creds li span { display: block; color: var(--muted); font-size: 14px; }
+
 /* ---------- 7. Passos ---------- */
 .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; }
 .steps li { display: flex; gap: 14px; align-items: flex-start; }
@@ -323,6 +341,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   .hero p.lead { font-size: 18px; }
 
   .tiles { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .about { grid-template-columns: 3fr 2fr; column-gap: 48px; align-items: start; }
   .tile { flex-direction: column; align-items: flex-start; min-height: 150px; }
   .steps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
   .price-grid.three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
