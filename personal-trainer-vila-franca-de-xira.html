@@ -6,45 +6,119 @@
   <!-- Pesquisa principal desta página: "personal trainer ao domicílio Vila Franca de Xira".
        A página inicial fica com "treino ao ar livre" e as aulas de grupo, para as duas não competirem no Google. -->
   <title>Personal Trainer ao Domicílio em Vila Franca de Xira | MOVE OUT</title>
-  <meta name="description" content="Personal trainer licenciado que vai a tua casa ou treina contigo ao ar livre em VFX, Alhandra, Alverca e arredores. Também a dois e online. Desde 80€/mês. 1.º treino grátis.">
+  <meta name="description" content="Personal trainer licenciado que vai a tua casa ou treina contigo ao ar livre em VFX, Alhandra e Alverca. A dois ou online. Desde 80€/mês. 1.º treino grátis.">
   <meta name="theme-color" content="#0E1A16">
   <link rel="canonical" href="https://moveoutvfx.com/personal-trainer-vila-franca-de-xira">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/img/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <!-- Tipos de letra alojados no próprio site (sem enviar o IP dos visitantes para a Google) -->
+  <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/anton.woff2" as="font" type="font/woff2" crossorigin>
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_PT">
   <meta property="og:title" content="Personal Trainer ao Domicílio em Vila Franca de Xira">
   <meta property="og:description" content="Treino individual ou a dois, em tua casa, ao ar livre ou online. 1.º treino grátis.">
   <meta property="og:url" content="https://moveoutvfx.com/personal-trainer-vila-franca-de-xira">
   <meta property="og:image" content="https://moveoutvfx.com/img/og-image.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css?v=5">
+  <link rel="stylesheet" href="/css/styles.css?v=6">
 
   <!-- Dados para o Google: o serviço, a zona e o preço -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Personal trainer ao domicílio e ao ar livre",
-    "serviceType": "Personal training",
-    "provider": { "@type": "ExerciseGym", "name": "MOVE OUT", "url": "https://moveoutvfx.com/", "telephone": "+351963053499" },
-    "areaServed": ["Vila Franca de Xira", "Alhandra", "Alverca do Ribatejo", "Castanheira do Ribatejo", "Carregado", "A-dos-Bispos", "Loja Nova"],
-    "offers": { "@type": "Offer", "price": "80", "priceCurrency": "EUR", "description": "PT individual, 1x por semana, por mês" }
-  }
-  </script>
   <!-- Perguntas frequentes: o Google pode mostrá-las diretamente nos resultados -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "Preciso de ter material em casa?", "acceptedAnswer": { "@type": "Answer", "text": "Não. Levo comigo o material necessário para o teu treino. Só precisas de espaço para te mexeres." } },
-      { "@type": "Question", "name": "Que zonas abrange o PT ao domicílio?", "acceptedAnswer": { "@type": "Answer", "text": "Vila Franca de Xira, Alhandra, Alverca do Ribatejo, Castanheira do Ribatejo, Carregado, A-dos-Bispos, Loja Nova e arredores." } },
-      { "@type": "Question", "name": "Como funciona o treino online?", "acceptedAnswer": { "@type": "Answer", "text": "É em direto, por videochamada. Vejo-te a treinar, corrijo a técnica e ajusto o treino na hora, como numa sessão presencial." } },
-      { "@type": "Question", "name": "Posso cancelar quando quiser?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Não há fidelização. Podes ajustar ou cancelar o plano com 30 dias de aviso." } }
-    ]
-  }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Personal trainer ao domicílio e ao ar livre",
+      "serviceType": "Personal training",
+      "provider": {
+        "@id": "https://moveoutvfx.com/#negocio"
+      },
+      "areaServed": [
+        "Vila Franca de Xira",
+        "Alhandra",
+        "Alverca do Ribatejo",
+        "Castanheira do Ribatejo",
+        "Carregado",
+        "A-dos-Bispos",
+        "Loja Nova"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "80",
+        "priceCurrency": "EUR",
+        "description": "PT individual, 1x por semana, por mês"
+      },
+      "@id": "https://moveoutvfx.com/personal-trainer-vila-franca-de-xira#servico",
+      "url": "https://moveoutvfx.com/personal-trainer-vila-franca-de-xira"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://moveoutvfx.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Personal trainer ao domicílio",
+          "item": "https://moveoutvfx.com/personal-trainer-vila-franca-de-xira"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Preciso de ter material em casa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Levo comigo o material necessário para o teu treino. Só precisas de espaço para te mexeres."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que zonas abrange o PT ao domicílio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vila Franca de Xira, Alhandra, Alverca do Ribatejo, Castanheira do Ribatejo, Carregado, A-dos-Bispos, Loja Nova e arredores. Se moras um pouco mais longe, ou não estás na lista, pergunta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como funciona o treino online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "É em direto, por videochamada. Vejo-te a treinar, corrijo a técnica e ajusto o treino na hora, como numa sessão presencial."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso treinar a dois?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. No PT Duo treinas com um amigo, parceiro ou colega e cada um paga menos. Treinar a dois é ótimo principalmente se tiverem um objetivo em comum, e também é mais difícil de faltar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso cancelar quando quiser?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Não há fidelização. Podes ajustar ou cancelar o plano com 30 dias de aviso."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -52,7 +126,15 @@
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="/">MOVE OUT</a>
-    <a class="app-link" href="/">← Voltar ao site</a>
+    <a class="app-link" data-wa="marcar o treino grátis" href="https://wa.me/351963053499">Treino grátis</a>
+    <nav class="nav" aria-label="Principal">
+      <a href="/aulas-de-grupo-ao-ar-livre-vila-franca-de-xira">Aulas de grupo</a>
+      <a href="/personal-trainer-vila-franca-de-xira" aria-current="page">Personal training</a>
+      <a href="/treino-gravidez-pos-parto-vila-franca-de-xira">Gravidez</a>
+      <a href="/#precos">Preços</a>
+      <a href="/sobre">Sobre</a>
+      <a href="/contacto">Contacto</a>
+    </nav>
   </div>
 </header>
 
@@ -107,7 +189,7 @@
         <div class="row"><span>5x por semana</span><b>150€/mês</b></div>
       </div>
     </div>
-    <p class="pay-note">Sem fidelização. Pagas por MB WAY, Multibanco ou cartão.</p>
+    <p class="pay-note">Sem fidelização. Pagas por MB WAY, Multibanco ou cartão. Preços finais, com impostos incluídos. <a href="/termos">Condições</a>.</p>
 
     <h2>Quem te treina</h2>
     <p>Miguel Carvalho, licenciado em Desporto, Condição Física e Saúde pela Escola Superior de Desporto de Rio Maior e Técnico de Exercício Físico (cédula n.º 127082). Dou treinos em Vila Franca de Xira desde outubro de 2020, com formação em avaliação física, dor e lesões, treino do core e exercício na gravidez e no pós-parto. <a href="/sobre">Ver todas as formações</a>.</p>
@@ -134,15 +216,33 @@
 <footer class="site-footer">
   <div class="wrap">
     <a class="brand" href="/">MOVE OUT</a>
-    <div class="links small">
+    <nav class="links" aria-label="Rodapé">
+      <a href="/aulas-de-grupo-ao-ar-livre-vila-franca-de-xira">Aulas de grupo ao ar livre</a>
+      <a href="/personal-trainer-vila-franca-de-xira">Personal trainer ao domicílio</a>
+      <a href="/treino-gravidez-pos-parto-vila-franca-de-xira">Treino na gravidez e pós-parto</a>
       <a href="/sobre">Sobre o Miguel</a>
       <a href="/contacto">Contacto</a>
-      <a href="/privacidade">Política de Privacidade</a>
-      <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </nav>
+    <div class="links">
+      <a href="https://www.instagram.com/moveoutpt/" target="_blank" rel="noopener">Instagram</a>
+      <a data-wa="saber mais" href="https://wa.me/351963053499">WhatsApp</a>
+      <a href="mailto:moveoutpt@gmail.com">moveoutpt@gmail.com</a>
     </div>
+    <div class="links small">
+      <a href="/termos">Termos e Condições</a>
+      <a href="/privacidade">Política de Privacidade</a>
+      <a href="/cookies">Política de Cookies</a>
+      <a class="lre" href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+    <!-- Dados legais obrigatórios (DL 7/2004 e Lei 144/2015) -->
+    <p class="legal">Miguel Marques de Carvalho, empresário em nome individual · NIF 242663192 · Vila Franca de Xira, Portugal · Técnico de Exercício Físico, cédula profissional n.º 127082 (IPDJ)</p>
+    <p class="legal">Litígios de consumo: Centro de Arbitragem de Conflitos de Consumo de Lisboa (<a href="https://www.centroarbitragemlisboa.pt" target="_blank" rel="noopener">centroarbitragemlisboa.pt</a>). Mais informação no <a href="https://www.consumidor.gov.pt" target="_blank" rel="noopener">Portal do Consumidor</a>.</p>
+    <span>© <span id="year">2026</span> MOVE OUT · Personal trainer e treino ao ar livre em Vila Franca de Xira</span>
   </div>
 </footer>
 
-<script src="/js/main.js?v=5" defer></script>
+<script src="/js/main.js?v=6" defer></script>
+<!-- Estatísticas de visitas sem cookies (Vercel Web Analytics) -->
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

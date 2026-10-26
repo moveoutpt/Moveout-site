@@ -4,11 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <!-- O título é o que mais pesa no Google: começa pela pesquisa que as pessoas fazem -->
-  <title>Personal Trainer em Vila Franca de Xira · Treino ao Ar Livre | MOVE OUT</title>
-  <meta name="description" content="Personal trainer licenciado em Vila Franca de Xira. Aulas de grupo junto ao Tejo, PT ao domicílio em VFX, Alhandra e Alverca, online e na gravidez. 1.º treino grátis.">
+  <title>Personal Trainer em Vila Franca de Xira · Treino Outdoor | MOVE OUT</title>
+  <meta name="description" content="Personal trainer em Vila Franca de Xira. Aulas de grupo junto ao Tejo, PT ao domicílio em VFX, Alhandra e Alverca, online e na gravidez. 1.º treino grátis.">
   <meta name="theme-color" content="#0E1A16">
   <link rel="canonical" href="https://moveoutvfx.com/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/img/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <!-- Tipos de letra alojados no próprio site (sem enviar o IP dos visitantes para a Google) -->
+  <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/anton.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Pré-visualização quando partilhas o link (Instagram, WhatsApp, Facebook) -->
   <meta property="og:type" content="website">
@@ -23,34 +29,224 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Tipos de letra: Anton (títulos) e Inter (texto) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/css/styles.css?v=5">
+  <link rel="preload" href="/media/hero-poster.jpg?v=3" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="/css/styles.css?v=6">
 
   <!-- Dados para o Google perceber que é um negócio local -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ExerciseGym",
-    "name": "MOVE OUT",
-    "foundingDate": "2020-10",
-    "description": "Personal trainer e treino ao ar livre em Vila Franca de Xira.",
-    "image": "https://moveoutvfx.com/img/og-image.png",
-    "founder": { "@type": "Person", "name": "Miguel Carvalho", "jobTitle": "Personal Trainer", "url": "https://moveoutvfx.com/sobre" },
-    "url": "https://moveoutvfx.com/",
-    "telephone": "+351963053499",
-    "email": "moveoutpt@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Vila Franca de Xira",
-      "addressCountry": "PT"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://moveoutvfx.com/#site",
+      "url": "https://moveoutvfx.com/",
+      "name": "MOVE OUT",
+      "inLanguage": "pt-PT",
+      "publisher": {
+        "@id": "https://moveoutvfx.com/#negocio"
+      }
     },
-    "areaServed": ["Vila Franca de Xira", "Alhandra", "Alverca do Ribatejo", "Castanheira do Ribatejo", "Carregado", "A-dos-Bispos", "Loja Nova", "Lisboa"],
-    "sameAs": ["https://www.instagram.com/moveoutpt/"],
-    "priceRange": "€€"
-  }
+    {
+      "@type": "ExerciseGym",
+      "@id": "https://moveoutvfx.com/#negocio",
+      "name": "MOVE OUT",
+      "alternateName": [
+        "Move Out VFX",
+        "Move Out PT"
+      ],
+      "description": "Personal trainer e treino ao ar livre em Vila Franca de Xira desde 2020: aulas de grupo junto ao Tejo (máximo 10 pessoas), personal training individual e a dois ao domicílio, ao ar livre ou online, e treino na gravidez e no pós-parto. Treinador licenciado em Desporto, Condição Física e Saúde e Técnico de Exercício Físico.",
+      "url": "https://moveoutvfx.com/",
+      "logo": "https://moveoutvfx.com/img/logo.png",
+      "image": [
+        "https://moveoutvfx.com/img/og-image.png",
+        "https://moveoutvfx.com/media/hero-poster.jpg"
+      ],
+      "slogan": "Bom dia, malta.",
+      "foundingDate": "2020-10",
+      "founder": {
+        "@id": "https://moveoutvfx.com/sobre#miguel"
+      },
+      "employee": {
+        "@id": "https://moveoutvfx.com/sobre#miguel"
+      },
+      "telephone": "+351963053499",
+      "email": "moveoutpt@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Vila Franca de Xira",
+        "addressRegion": "Lisboa",
+        "postalCode": "2600",
+        "addressCountry": "PT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.9552,
+        "longitude": -8.9897
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Vila Franca de Xira"
+        },
+        {
+          "@type": "City",
+          "name": "Alhandra"
+        },
+        {
+          "@type": "City",
+          "name": "Alverca do Ribatejo"
+        },
+        {
+          "@type": "City",
+          "name": "Castanheira do Ribatejo"
+        },
+        {
+          "@type": "City",
+          "name": "Carregado"
+        },
+        {
+          "@type": "City",
+          "name": "A-dos-Bispos"
+        },
+        {
+          "@type": "City",
+          "name": "Loja Nova"
+        },
+        {
+          "@type": "City",
+          "name": "Lisboa"
+        }
+      ],
+      "priceRange": "20€ – 160€ por mês",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "MB WAY, Multibanco, cartão",
+      "knowsLanguage": "pt-PT",
+      "isAccessibleForFree": false,
+      "sameAs": [
+        "https://www.instagram.com/moveoutpt/"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Treinos MOVE OUT",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@id": "https://moveoutvfx.com/aulas-de-grupo-ao-ar-livre-vila-franca-de-xira#servico"
+            },
+            "price": "20",
+            "priceCurrency": "EUR",
+            "description": "Aulas de grupo, mensalidade 1x por semana (desde)"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@id": "https://moveoutvfx.com/personal-trainer-vila-franca-de-xira#servico"
+            },
+            "price": "80",
+            "priceCurrency": "EUR",
+            "description": "PT individual, 1x por semana, por mês (desde)"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@id": "https://moveoutvfx.com/treino-gravidez-pos-parto-vila-franca-de-xira#servico"
+            },
+            "price": "80",
+            "priceCurrency": "EUR",
+            "description": "PT na gravidez e pós-parto, 1x por semana, por mês (desde)"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://moveoutvfx.com/sobre#miguel",
+      "name": "Miguel Carvalho",
+      "url": "https://moveoutvfx.com/sobre",
+      "jobTitle": "Personal Trainer"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Preciso de experiência para começar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. As aulas adaptam-se a todos os níveis, de quem nunca treinou a quem já tem base. O Miguel ajusta a intensidade a cada pessoa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como funciona o 1.º treino grátis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mandas mensagem pelo WhatsApp, combinamos o dia e apareces. Sem compromisso e sem pressão: experimentas e decides no fim."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto tempo dura cada aula?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As aulas de grupo duram no máximo 45 minutos. As sessões de PT Individual e PT Duo ajustam-se às tuas necessidades e disponibilidade."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso treinar durante a gravidez ou no pós-parto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Temos um programa de PT específico para gravidez e pós-parto, com treino adaptado e seguro em cada fase."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Em que zonas o PT ao domicílio está disponível?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Em Vila Franca de Xira, Alhandra, Alverca do Ribatejo, Castanheira do Ribatejo, Carregado, A-dos-Bispos, Loja Nova e arredores. Levo o material comigo. Se moras um pouco mais longe, ou não vês a tua terra na lista, pergunta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que formação tem o treinador?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Licenciatura em Desporto, Condição Física e Saúde (Escola Superior de Desporto de Rio Maior) com título profissional de Técnico de Exercício Físico, cédula n.º 127082. Tem também formação específica em exercício na gravidez e no pós-parto e em diástase abdominal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Tenho de me comprometer a um horário?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Um horário fixo ajuda a garantir a tua vaga, mas podes mudar conforme a tua disponibilidade."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso cancelar quando quiser?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Não há fidelização. Podes ajustar ou cancelar o plano a qualquer momento, com 30 dias de aviso."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que preciso de levar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Uma garrafa de água e vontade de treinar. O resto é comigo."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -58,16 +254,15 @@
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="/">MOVE OUT</a>
-    <nav class="nav" aria-label="Principal">
-      <a href="#treinos">Treinos</a>
-      <a href="/aulas-de-grupo-ao-ar-livre-vila-franca-de-xira">Aulas de grupo</a>
-      <a href="#precos">Preços</a>
-      <a href="/treino-gravidez-pos-parto-vila-franca-de-xira">Gravidez</a>
-      <a href="/personal-trainer-vila-franca-de-xira">Personal training</a>
-      <a href="/sobre">Sobre</a>
-      <a href="#faq">Dúvidas</a>
-    </nav>
     <a class="app-link" data-wa="marcar o treino grátis" href="https://wa.me/351963053499">Treino grátis</a>
+    <nav class="nav" aria-label="Principal">
+      <a href="/aulas-de-grupo-ao-ar-livre-vila-franca-de-xira">Aulas de grupo</a>
+      <a href="/personal-trainer-vila-franca-de-xira">Personal training</a>
+      <a href="/treino-gravidez-pos-parto-vila-franca-de-xira">Gravidez</a>
+      <a href="/#precos">Preços</a>
+      <a href="/sobre">Sobre</a>
+      <a href="/contacto">Contacto</a>
+    </nav>
   </div>
 </header>
 
@@ -77,7 +272,7 @@
   <section class="hero">
     <div class="hero-media">
       <!-- Vídeo em loop, sem som. "playsinline" impede o iPhone de abrir em ecrã inteiro. -->
-      <video autoplay muted loop playsinline preload="auto" poster="/media/hero-poster.jpg?v=3" aria-hidden="true">
+      <video autoplay muted loop playsinline preload="metadata" poster="/media/hero-poster.jpg?v=3" aria-hidden="true">
         <source src="/media/hero.mp4?v=3" type="video/mp4">
       </video>
     </div>
@@ -257,7 +452,7 @@
         </div>
       </div>
 
-      <p class="pay-note">Pagas por MB WAY, Multibanco ou cartão.</p>
+      <p class="pay-note">Pagas por MB WAY, Multibanco ou cartão. Preços finais, com impostos incluídos. <a href="/termos">Condições</a>.</p>
     </div>
   </section>
 
@@ -330,21 +525,33 @@
 <footer class="site-footer">
   <div class="wrap">
     <a class="brand" href="/">MOVE OUT</a>
+    <nav class="links" aria-label="Rodapé">
+      <a href="/aulas-de-grupo-ao-ar-livre-vila-franca-de-xira">Aulas de grupo ao ar livre</a>
+      <a href="/personal-trainer-vila-franca-de-xira">Personal trainer ao domicílio</a>
+      <a href="/treino-gravidez-pos-parto-vila-franca-de-xira">Treino na gravidez e pós-parto</a>
+      <a href="/sobre">Sobre o Miguel</a>
+      <a href="/contacto">Contacto</a>
+    </nav>
     <div class="links">
       <a href="https://www.instagram.com/moveoutpt/" target="_blank" rel="noopener">Instagram</a>
       <a data-wa="saber mais" href="https://wa.me/351963053499">WhatsApp</a>
       <a href="mailto:moveoutpt@gmail.com">moveoutpt@gmail.com</a>
     </div>
     <div class="links small">
-      <a href="/sobre">Sobre o Miguel</a>
-      <a href="/contacto">Contacto</a>
+      <a href="/termos">Termos e Condições</a>
       <a href="/privacidade">Política de Privacidade</a>
-      <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Livro de Reclamações</a>
+      <a href="/cookies">Política de Cookies</a>
+      <a class="lre" href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Livro de Reclamações</a>
     </div>
-    <span>© <span id="year">2026</span> MOVE OUT · Vila Franca de Xira · Treino outdoor · Personal training · Online</span>
+    <!-- Dados legais obrigatórios (DL 7/2004 e Lei 144/2015) -->
+    <p class="legal">Miguel Marques de Carvalho, empresário em nome individual · NIF 242663192 · Vila Franca de Xira, Portugal · Técnico de Exercício Físico, cédula profissional n.º 127082 (IPDJ)</p>
+    <p class="legal">Litígios de consumo: Centro de Arbitragem de Conflitos de Consumo de Lisboa (<a href="https://www.centroarbitragemlisboa.pt" target="_blank" rel="noopener">centroarbitragemlisboa.pt</a>). Mais informação no <a href="https://www.consumidor.gov.pt" target="_blank" rel="noopener">Portal do Consumidor</a>.</p>
+    <span>© <span id="year">2026</span> MOVE OUT · Personal trainer e treino ao ar livre em Vila Franca de Xira</span>
   </div>
 </footer>
 
-<script src="/js/main.js?v=5" defer></script>
+<script src="/js/main.js?v=6" defer></script>
+<!-- Estatísticas de visitas sem cookies (Vercel Web Analytics) -->
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

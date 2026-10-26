@@ -9,39 +9,114 @@
   <meta name="theme-color" content="#0E1A16">
   <link rel="canonical" href="https://moveoutvfx.com/aulas-de-grupo-ao-ar-livre-vila-franca-de-xira">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/img/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <!-- Tipos de letra alojados no próprio site (sem enviar o IP dos visitantes para a Google) -->
+  <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/anton.woff2" as="font" type="font/woff2" crossorigin>
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_PT">
   <meta property="og:title" content="Aulas de Grupo ao Ar Livre em Vila Franca de Xira">
   <meta property="og:description" content="Treinos de 45 minutos junto ao Tejo, com no máximo 10 pessoas. 1.º treino grátis.">
   <meta property="og:url" content="https://moveoutvfx.com/aulas-de-grupo-ao-ar-livre-vila-franca-de-xira">
   <meta property="og:image" content="https://moveoutvfx.com/img/og-image.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css?v=5">
-
+  <link rel="stylesheet" href="/css/styles.css?v=6">
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Aulas de grupo ao ar livre",
-    "serviceType": "Treino de grupo ao ar livre",
-    "provider": { "@type": "ExerciseGym", "name": "MOVE OUT", "url": "https://moveoutvfx.com/", "telephone": "+351963053499" },
-    "areaServed": "Vila Franca de Xira",
-    "offers": { "@type": "Offer", "price": "20", "priceCurrency": "EUR", "description": "Mensalidade, 1 aula por semana" }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "Preciso de experiência para começar?", "acceptedAnswer": { "@type": "Answer", "text": "Não. As aulas adaptam-se a todos os níveis, de quem nunca treinou a quem já tem base. Ajusto a intensidade a cada pessoa." } },
-      { "@type": "Question", "name": "E se chover?", "acceptedAnswer": { "@type": "Answer", "text": "Treinamos num espaço coberto junto ao Pavilhão Multiusos do Cevadeiro ou, se for preciso, online." } },
-      { "@type": "Question", "name": "Qual a diferença entre mensalidade e pack de aulas?", "acceptedAnswer": { "@type": "Answer", "text": "A mensalidade é para quem treina com regularidade, um certo número de vezes por semana. O pack é um conjunto de aulas que usas quando te der jeito, válido durante 3 meses." } },
-      { "@type": "Question", "name": "Posso cancelar quando quiser?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Não há fidelização. Podes ajustar ou cancelar o plano com 30 dias de aviso." } }
-    ]
-  }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Aulas de grupo ao ar livre",
+      "serviceType": "Treino de grupo ao ar livre",
+      "provider": {
+        "@id": "https://moveoutvfx.com/#negocio"
+      },
+      "areaServed": [
+        "Vila Franca de Xira"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "20",
+        "priceCurrency": "EUR",
+        "description": "Mensalidade, 1 aula por semana"
+      },
+      "@id": "https://moveoutvfx.com/aulas-de-grupo-ao-ar-livre-vila-franca-de-xira#servico",
+      "url": "https://moveoutvfx.com/aulas-de-grupo-ao-ar-livre-vila-franca-de-xira"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://moveoutvfx.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Aulas de grupo ao ar livre",
+          "item": "https://moveoutvfx.com/aulas-de-grupo-ao-ar-livre-vila-franca-de-xira"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Preciso de experiência para começar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. As aulas adaptam-se a todos os níveis, de quem nunca treinou a quem já tem base. Ajusto a intensidade a cada pessoa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que preciso de levar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Uma garrafa de água e roupa confortável. O material é por minha conta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "E se chover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Treinamos num espaço coberto junto ao Pavilhão Multiusos do Cevadeiro ou, se for preciso, online."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a diferença entre mensalidade e pack de aulas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A mensalidade é para quem treina com regularidade, um certo número de vezes por semana. O pack é um conjunto de aulas que usas quando te der jeito, válido durante 3 meses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso vir se estiver grávida?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Podes, mas é recomendado um acompanhamento mais personalizado para garantir segurança e atenção necessária num período tão importante da tua vida. Ver o treino na gravidez e pós-parto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso cancelar quando quiser?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Não há fidelização. Podes ajustar ou cancelar o plano com 30 dias de aviso."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -49,7 +124,15 @@
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="/">MOVE OUT</a>
-    <a class="app-link" href="/">← Voltar ao site</a>
+    <a class="app-link" data-wa="marcar o treino grátis" href="https://wa.me/351963053499">Treino grátis</a>
+    <nav class="nav" aria-label="Principal">
+      <a href="/aulas-de-grupo-ao-ar-livre-vila-franca-de-xira" aria-current="page">Aulas de grupo</a>
+      <a href="/personal-trainer-vila-franca-de-xira">Personal training</a>
+      <a href="/treino-gravidez-pos-parto-vila-franca-de-xira">Gravidez</a>
+      <a href="/#precos">Preços</a>
+      <a href="/sobre">Sobre</a>
+      <a href="/contacto">Contacto</a>
+    </nav>
   </div>
 </header>
 
@@ -115,7 +198,7 @@
         <div class="row"><span>20 aulas</span><b>45€</b></div>
       </div>
     </div>
-    <p class="pay-note">Sem fidelização. Pagas por MB WAY, Multibanco ou cartão.</p>
+    <p class="pay-note">Sem fidelização. Pagas por MB WAY, Multibanco ou cartão. Preços finais, com impostos incluídos. <a href="/termos">Condições</a>.</p>
 
     <h2>O que diz quem treina connosco</h2>
     <blockquote class="quote" style="margin-top:12px">
@@ -148,17 +231,33 @@
 <footer class="site-footer">
   <div class="wrap">
     <a class="brand" href="/">MOVE OUT</a>
-    <div class="links small">
-      <a href="/personal-trainer-vila-franca-de-xira">Personal training</a>
-      <a href="/treino-gravidez-pos-parto-vila-franca-de-xira">Gravidez e pós-parto</a>
+    <nav class="links" aria-label="Rodapé">
+      <a href="/aulas-de-grupo-ao-ar-livre-vila-franca-de-xira">Aulas de grupo ao ar livre</a>
+      <a href="/personal-trainer-vila-franca-de-xira">Personal trainer ao domicílio</a>
+      <a href="/treino-gravidez-pos-parto-vila-franca-de-xira">Treino na gravidez e pós-parto</a>
       <a href="/sobre">Sobre o Miguel</a>
       <a href="/contacto">Contacto</a>
-      <a href="/privacidade">Política de Privacidade</a>
-      <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </nav>
+    <div class="links">
+      <a href="https://www.instagram.com/moveoutpt/" target="_blank" rel="noopener">Instagram</a>
+      <a data-wa="saber mais" href="https://wa.me/351963053499">WhatsApp</a>
+      <a href="mailto:moveoutpt@gmail.com">moveoutpt@gmail.com</a>
     </div>
+    <div class="links small">
+      <a href="/termos">Termos e Condições</a>
+      <a href="/privacidade">Política de Privacidade</a>
+      <a href="/cookies">Política de Cookies</a>
+      <a class="lre" href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+    <!-- Dados legais obrigatórios (DL 7/2004 e Lei 144/2015) -->
+    <p class="legal">Miguel Marques de Carvalho, empresário em nome individual · NIF 242663192 · Vila Franca de Xira, Portugal · Técnico de Exercício Físico, cédula profissional n.º 127082 (IPDJ)</p>
+    <p class="legal">Litígios de consumo: Centro de Arbitragem de Conflitos de Consumo de Lisboa (<a href="https://www.centroarbitragemlisboa.pt" target="_blank" rel="noopener">centroarbitragemlisboa.pt</a>). Mais informação no <a href="https://www.consumidor.gov.pt" target="_blank" rel="noopener">Portal do Consumidor</a>.</p>
+    <span>© <span id="year">2026</span> MOVE OUT · Personal trainer e treino ao ar livre em Vila Franca de Xira</span>
   </div>
 </footer>
 
-<script src="/js/main.js?v=5" defer></script>
+<script src="/js/main.js?v=6" defer></script>
+<!-- Estatísticas de visitas sem cookies (Vercel Web Analytics) -->
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

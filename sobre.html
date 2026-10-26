@@ -4,36 +4,101 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Miguel Carvalho, Personal Trainer em Vila Franca de Xira | MOVE OUT</title>
-  <meta name="description" content="Licenciado em Desporto, Condição Física e Saúde (na ESDRM, em Rio Maior) e Técnico de Exercício Físico. Formação em gravidez e pós-parto, avaliação física e treino do core.">
+  <meta name="description" content="Licenciado em Desporto, Condição Física e Saúde e Técnico de Exercício Físico. Formação em gravidez e pós-parto, avaliação física e treino do core.">
   <meta name="theme-color" content="#0E1A16">
   <link rel="canonical" href="https://moveoutvfx.com/sobre">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/img/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <!-- Tipos de letra alojados no próprio site (sem enviar o IP dos visitantes para a Google) -->
+  <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/anton.woff2" as="font" type="font/woff2" crossorigin>
   <meta property="og:type" content="profile">
   <meta property="og:locale" content="pt_PT">
   <meta property="og:title" content="Miguel Carvalho, Personal Trainer em Vila Franca de Xira">
+  <meta property="og:description" content="Licenciado em Desporto, Condição Física e Saúde e Técnico de Exercício Físico. Treina pessoas ao ar livre em Vila Franca de Xira desde 2020.">
   <meta property="og:url" content="https://moveoutvfx.com/sobre">
   <meta property="og:image" content="https://moveoutvfx.com/img/og-image.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css?v=5">
+  <link rel="stylesheet" href="/css/styles.css?v=6">
 
   <!-- Dados para o Google: quem é o treinador e que formação tem -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Miguel Carvalho",
-    "jobTitle": "Personal Trainer",
-    "url": "https://moveoutvfx.com/sobre",
-    "worksFor": { "@type": "Organization", "name": "MOVE OUT", "url": "https://moveoutvfx.com/", "foundingDate": "2020-10" },
-    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Escola Superior de Desporto de Rio Maior" },
-    "hasCredential": [
-      { "@type": "EducationalOccupationalCredential", "name": "Licenciatura em Desporto, Condição Física e Saúde", "credentialCategory": "degree" },
-      { "@type": "EducationalOccupationalCredential", "name": "Título profissional de Técnico de Exercício Físico", "credentialCategory": "license" }
-    ],
-    "sameAs": ["https://www.instagram.com/moveoutpt/"]
-  }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "url": "https://moveoutvfx.com/sobre",
+      "mainEntity": {
+        "@id": "https://moveoutvfx.com/sobre#miguel"
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "Miguel Carvalho",
+      "jobTitle": "Personal Trainer",
+      "url": "https://moveoutvfx.com/sobre",
+      "worksFor": {
+        "@id": "https://moveoutvfx.com/#negocio"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Escola Superior de Desporto de Rio Maior"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Licenciatura em Desporto, Condição Física e Saúde",
+          "credentialCategory": "degree"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Título profissional de Técnico de Exercício Físico",
+          "credentialCategory": "license",
+          "identifier": "127082",
+          "recognizedBy": {
+            "@type": "GovernmentOrganization",
+            "name": "Instituto Português do Desporto e Juventude (IPDJ)"
+          }
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/moveoutpt/"
+      ],
+      "@id": "https://moveoutvfx.com/sobre#miguel",
+      "alternateName": "Miguel Marques de Carvalho",
+      "knowsAbout": [
+        "Personal training",
+        "Treino ao ar livre",
+        "Exercício na gravidez e no pós-parto",
+        "Diástase abdominal",
+        "Treino do core",
+        "HIIT",
+        "Avaliação física",
+        "Treino calisténico"
+      ],
+      "knowsLanguage": "pt-PT"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://moveoutvfx.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Sobre o Miguel",
+          "item": "https://moveoutvfx.com/sobre"
+        }
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -41,7 +106,15 @@
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="/">MOVE OUT</a>
-    <a class="app-link" href="/">← Voltar ao site</a>
+    <a class="app-link" data-wa="marcar o treino grátis" href="https://wa.me/351963053499">Treino grátis</a>
+    <nav class="nav" aria-label="Principal">
+      <a href="/aulas-de-grupo-ao-ar-livre-vila-franca-de-xira">Aulas de grupo</a>
+      <a href="/personal-trainer-vila-franca-de-xira">Personal training</a>
+      <a href="/treino-gravidez-pos-parto-vila-franca-de-xira">Gravidez</a>
+      <a href="/#precos">Preços</a>
+      <a href="/sobre" aria-current="page">Sobre</a>
+      <a href="/contacto">Contacto</a>
+    </nav>
   </div>
 </header>
 
@@ -90,15 +163,33 @@
 <footer class="site-footer">
   <div class="wrap">
     <a class="brand" href="/">MOVE OUT</a>
-    <div class="links small">
+    <nav class="links" aria-label="Rodapé">
+      <a href="/aulas-de-grupo-ao-ar-livre-vila-franca-de-xira">Aulas de grupo ao ar livre</a>
+      <a href="/personal-trainer-vila-franca-de-xira">Personal trainer ao domicílio</a>
+      <a href="/treino-gravidez-pos-parto-vila-franca-de-xira">Treino na gravidez e pós-parto</a>
       <a href="/sobre">Sobre o Miguel</a>
       <a href="/contacto">Contacto</a>
-      <a href="/privacidade">Política de Privacidade</a>
-      <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </nav>
+    <div class="links">
+      <a href="https://www.instagram.com/moveoutpt/" target="_blank" rel="noopener">Instagram</a>
+      <a data-wa="saber mais" href="https://wa.me/351963053499">WhatsApp</a>
+      <a href="mailto:moveoutpt@gmail.com">moveoutpt@gmail.com</a>
     </div>
+    <div class="links small">
+      <a href="/termos">Termos e Condições</a>
+      <a href="/privacidade">Política de Privacidade</a>
+      <a href="/cookies">Política de Cookies</a>
+      <a class="lre" href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+    <!-- Dados legais obrigatórios (DL 7/2004 e Lei 144/2015) -->
+    <p class="legal">Miguel Marques de Carvalho, empresário em nome individual · NIF 242663192 · Vila Franca de Xira, Portugal · Técnico de Exercício Físico, cédula profissional n.º 127082 (IPDJ)</p>
+    <p class="legal">Litígios de consumo: Centro de Arbitragem de Conflitos de Consumo de Lisboa (<a href="https://www.centroarbitragemlisboa.pt" target="_blank" rel="noopener">centroarbitragemlisboa.pt</a>). Mais informação no <a href="https://www.consumidor.gov.pt" target="_blank" rel="noopener">Portal do Consumidor</a>.</p>
+    <span>© <span id="year">2026</span> MOVE OUT · Personal trainer e treino ao ar livre em Vila Franca de Xira</span>
   </div>
 </footer>
 
-<script src="/js/main.js?v=5" defer></script>
+<script src="/js/main.js?v=6" defer></script>
+<!-- Estatísticas de visitas sem cookies (Vercel Web Analytics) -->
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

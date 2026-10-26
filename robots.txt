@@ -1,3 +1,4 @@
+# Todos os motores de busca e assistentes de IA são bem-vindos
 User-agent: *
 Allow: /
 
